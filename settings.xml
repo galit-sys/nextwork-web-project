@@ -1,0 +1,33 @@
+<settings>
+    <servers>
+    <server>
+        <id>galitwork-galit-devops-cicd</id>
+        <username>aws</username>
+        <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+    </server>
+    </servers>
+
+    <profiles>
+    <profile>
+        <id>galitwork-galit-devops-cicd</id>
+        <activation>
+        <activeByDefault>true</activeByDefault>
+        </activation>
+        <repositories>
+        <repository>
+            <id>galitwork-galit-devops-cicd</id>
+            <url>https://galitwork-915449291799.d.codeartifact.us-west-2.amazonaws.com/maven/galit-devops-cicd/</url>
+        </repository>
+        </repositories>
+    </profile>
+    </profiles>
+
+    <mirrors>
+    <mirror>
+        <id>galitwork-galit-devops-cicd</id>
+        <name>galitwork-galit-devops-cicd</name>
+        <url>https://galitwork-915449291799.d.codeartifact.us-west-2.amazonaws.com/maven/galit-devops-cicd/</url>
+        <mirrorOf>*</mirrorOf>
+    </mirror>
+    </mirrors>
+</settings>
